@@ -1,0 +1,31 @@
+# shopping cart
+foods = []
+prices = []
+total = 0
+
+while True:
+    food = input("Enter your item: ('q' to quit) ")
+    if food.lower() == "q":
+        break
+
+    while True:
+        try:
+            price = float(input("Enter the price: "))
+            break
+        except ValueError:
+            print("The price you have entered is invalid")
+
+
+    foods.append(food)
+    prices.append(price)
+    total += price
+
+print("Your shopping cart")
+
+for food in foods:
+    print(food)
+for price in prices:
+    print(price)
+
+print(f"Your total shopping cart total is £{total}")
+
